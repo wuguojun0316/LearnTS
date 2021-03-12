@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>海警务</title>
+        
+    </head>
+    <body>
+        <div>
+            <h3>Hello, Node.js</h3>
+        </div>
+    </body>
+    <script src='js/index.js'></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
+    <script>
+        let obj = {
+            title: 'Person',
+            age: 25
+        }
+        console.log(Object.getOwnPropertyDescriptor(obj, 'title'));
+        let objc = {};
+        Object.defineProperty(objc, 'title', {
+            value: 'Python',
+            writable: false,
+            enumerable: true,
+            configurable: true
+        })
+        console.log(objc.title);
+        objc.title = 'Hello, Python.';      // 无法修改
+        console.log(objc.title);
+    </script>
+</html>
